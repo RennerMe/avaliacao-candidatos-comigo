@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comigo Rastreamento</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="area1">
+            <div class="area-login">
+                <h1>Entre na sua conta</h1>
+                <p>Boas vindas! Por favor, insira suas credenciais para acessar os sistema da Comigo.</p>
+                
+                <form id="loginForm">
+                    <label for="usuario"></label>
+                    <input type="email" id="usuario" name="usuario" placeholder="E-mail" required><br>
+
+                    <label for="senha"></label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                    
+                    <p id="loginMensagem"></p>
+                    
+                    <div class="area-checkbox">
+                        <div class="checkbox">
+                            <input type="checkbox" id="conectado" name="conectado">
+                            <label for="conectado">Mantenha-me conectado.</label>
+                        </div>
+                        <a href="#" id="esqueci-senha">Esqueci minha senha</a>
+                    </div>
+                    <button class="button" type="submit">Entrar</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="area2"><img src="assets/images/Bg-Login.png" alt=""></div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
+
+
