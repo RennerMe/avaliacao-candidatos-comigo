@@ -1,0 +1,310 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comigo Rastreamentos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/bd83341d75.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="area-logo"><img src="assets/images/logoComigo.png" alt="logo"></div>
+        <div class="area-titulo">Atendimento ao cliente</div>
+        <div class="area-menu">
+            <div class="menu-atualizar"><img src="assets/images/batualizar.png" alt="atualizar"></div>
+            <div class="menu-barra"></div>
+            <div class="menu-predio"><img src="assets/images/bpredio.png" alt="predio"></div>
+            <div class="menu-lua"><img src="assets/images/blua.png" alt="lua"></div>
+            <div class="menu-perfil"><img src="assets/images/bperfil.png" alt="perfil"></div>
+        </div>
+    </header>
+    
+    <section>
+        <div class="container">
+            <div class="path">
+                <img id="icon-casa" src="assets/images/casa.png" alt="casa">
+                <img src="assets/images/proximo.png" alt="proximo">
+                <p>Atendimento ao cliente</p>
+                <img src="assets/images/proximo.png" alt="proximo">
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <div class="barra-filtros">
+                <div> <!--js open modal-->
+                    <button class="button" id="add-ticket-btn">Abrir ticket +</button>
+                </div>
+                <div class="pesquisa">
+                    <input class="input-pesquisa" type="text" placeholder="Pesquisar">
+                    <img class="icon_lupa" src="assets/images/lupa.png" alt="lupa">
+                </div>
+                <div class="periodo">
+                    Período:
+                    <select>
+                        <option value="hoje">Hoje</option>
+                        <option value="semana">Semana</option>
+                        <option value="mes">Mês</option>
+                    </select>
+                </div>
+                <div class="ordenacao">
+                    Ordenado por:
+                    <select>
+                        <option value="data-abertura">Data de abertura</option>
+                        <option value="prazo">Prazo</option>
+                        <option value="id">Id</option>
+                    </select>
+                </div>
+                <div class="status">
+                    <select>
+                        <option value="">Status</option>
+                        <option value="a_fazer">A fazer</option>
+                        <option value="em_andamento">Em andamento</option>
+                        <option value="concluido">Concluído</option>
+                    </select>
+                </div>
+                <div class="tipo">
+                    <select>
+                        <option value="">Tipo</option>
+                        <option value="suporte">Suporte</option>
+                        <option value="vendas">Vendas</option>
+                        <option value="operacional">Operacional</option>
+                    </select>
+                </div>
+                <div class="motivo">
+                    <select>
+                        <option value="">Motivo</option>
+                        <option value="suporte">Incidente</option>
+                        <option value="vendas">Upgrade</option>
+                        <option value="operacional">Teste de rastreador</option>
+                    </select>
+                </div>
+                <div class="cliente">
+                    <select>
+                        <option value="">Cliente</option>
+                        <option value="suporte">Cliente 1</option>
+                        <option value="vendas">Cliente 2</option>
+                        <option value="operacional">Cliente 3 </option>
+                    </select>
+                </div>
+                <div class="veiculo">
+                    <select>
+                        <option value="">Veículo</option>
+                        <option value="suporte">Veículo 1</option>
+                        <option value="vendas">Veículo 2</option>
+                        <option value="operacional">Veículo 3 </option>
+                    </select>
+                </div>
+                <div class="menu-barra"></div>
+                <div class="remover">
+                    <button class="button">Remover filtros</button>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tipo</th>
+                        <th>Motivo</th>
+                        <th>Descrição</th>
+                        <th>Cliente</th>
+                        <th>Veículo</th>
+                        <th>Data de abertura</th>
+                        <th>Prazo</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>110</td>
+                        <td>Suporte</td>
+                        <td>Incidente</td>
+                        <td>Veículos sem comunicação</td>
+                        <td>Cliente 1</td>
+                        <td>Veículo 2, Veículo 6</td>
+                        <td>02/07/2023</td>
+                        <td>05/07/2023</td>
+                        <td>A fazer</td>
+                        <td>
+                            <i class="fa-solid fa-pencil"></i> 
+                            <i class="fa-solid fa-trash" style="color: red;"></i>  
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>111</td>
+                        <td>Vendas</td>
+                        <td>Upgrade</td>
+                        <td>Upgrade</td>
+                        <td>Cliente 2</td>
+                        <td>Veículo 2</td>
+                        <td>01/07/2023</td>
+                        <td>05/07/2023</td>
+                        <td>Em andamento</td>
+                        <td>
+                            <i class="fa-solid fa-pencil"></i> 
+                            <i class="fa-solid fa-trash" style="color: red;"></i>  
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>112</td>
+                        <td>Suporte</td>
+                        <td>Incidente</td>
+                        <td>Veículos sem comunicação</td>
+                        <td>Cliente 3</td>
+                        <td>Veículo 4</td>
+                        <td>02/07/2023</td>
+                        <td>05/07/2023</td>
+                        <td>Concluído</td>
+                        <td>
+                            <i class="fa-solid fa-pencil"></i> 
+                            <i class="fa-solid fa-trash" style="color: red;"></i>  
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="footer-table">
+                <div class="control-pag">
+                    <button class="select">1</button>
+                    <button>2</button>
+                    <button>></button>
+                </div>
+                <div>Exibindo <span id="x">X</span> de <span id="y">Y</span> do total de <span id="z">Z</span> registros</div>
+                <select name="pages" id="pages">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="modal-container " id="add-ticket-modal" > <!--class= visible-->
+        <div class="modal">
+            <div class="modal-header">
+                <div>
+                    <p>formulário de cadastro</p>
+                    <h2>Novo atendimento ao cliente</h2>
+                </div>
+                 <!--fecha modal-->
+                <button class="btn-icon" id="close-modal-btn">&times;</button>
+            </div>
+
+            <div class="steps">
+                <div class="step active" data-step="1">CONTATO</div>
+                <div class="step" data-step="2">TICKET</div>
+                <div class="step" data-step="3">MOTIVO</div>
+            </div>
+
+            <div class="form-body">
+                <div class="form-step active" id="step1">
+                    <h4>Houve contato passivo?</h4>
+                    <div class="radio-card-group">
+                        <label class="radio-card">
+                            <input id="contato-sim" type="radio" name="contato-passivo" value="sim" checked>
+                            <strong>Sim</strong><br>
+                            <span>O cliente entrou em contato</span>
+                        </label>
+                        <label class="radio-card">
+                            <input id="contato-nao" type="radio" name="contato-passivo" value="nao">
+                            <strong>Não</strong><br>
+                            <span>Contato ainda sera feito</span>
+                        </label>
+                    </div>
+                   <div id="tipo-contato-container"> <!--Js contato-off-->
+                        <label for="tipo-contato"></label>
+                        <select id="tipo-contato">
+                            <option>Tipo de contato</option>
+                            <option>WhatsApp</option>
+                            <option>Email</option>
+                            <option>Telefone</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-step " id="step2">
+                    <h4>Qual o intuito desse ticket?</h4>
+                    <div class="radio-card-group ticket">
+                        
+                        <label class="radio-card">
+                            <input type="radio" name="intuito-ticket" value="operacional" >
+                            <strong>Operacional</strong><br>
+                            <span>Sub titulo</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="intuito-ticket" value="suporte" >
+                            <strong>Suporte</strong><br>
+                            <span>Sub titulo</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="intuito-ticket" value="relacionamento" >
+                             <strong>Relacionamento</strong><br>
+                            <span>Sub titulo</span>
+                        </label>
+                         <label class="radio-card">
+                            <input type="radio" name="intuito-ticket" value="vendas" >
+                            <strong>Vendas</strong><br>
+                            <span>Sub titulo</span>
+                        </label>
+                    </div>
+                    <label for="veiculos"></label>
+                    <select id="veiculos">
+                        <option>Veículo(s)</option>
+                        <option>Veiculo 1</option>
+                        <option>Veiculo 2</option>
+                    </select>
+                </div>
+
+                <div class="form-step " id="step3">
+                    <h4>Qual o motivo desse ticket?</h4>
+                    <div class="pesquisa">
+                        <input class="input-pesquisa" type="text" placeholder="Pesquisar">
+                        <img class="icon_lupa" src="assets/images/lupa.png" alt="lupa">
+                    </div>
+                    <div class="radio-card-group motivo">
+                        
+                        <label class="radio-card">
+                            <input type="radio" name="motivo" value="incidente" >
+                            <strong>Incidente</strong><br>
+                            <span>Sub titulo</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="motivo" value="upgrade" >
+                            <strong>Upgrade</strong><br>
+                            <span>Sub titulo</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="motivo" value="teste-rastreador" >
+                             <strong>Teste de rastreador</strong><br>
+                            <span>Sub titulo</span>
+                        </label>
+                    </div>
+                    <p>Prazo estimado: <strong>11/08/2025</strong></p>
+                    <span>Informe o cliente que a resolução deste motivo está prevista em {3 dias úteis}.</span>
+                    <textarea placeholder="Informe mais detalhes sobre o ticket"></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="btn-voltar">
+                        <i class="fa-regular fa-arrow-left" style="color: #1169B0;"></i> Voltar
+                    </button>
+                    <button class="btn btn-primary" id="btn-avancar">
+                        Avançar <i class="fa-regular fa-arrow-right" style="color: #ffffff;"></i>
+                    </button>
+                    <button class="btn btn-primary none" id="btn-cadastrar">
+                        Cadastrar <i class="fa-regular fa-check" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
