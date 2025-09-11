@@ -3,6 +3,8 @@
 # Desafio de Estágio: Sistema de Gerenciamento de Tickets
 
 ![Status do Projeto](https://img.shields.io/badge/Status-Concluído-brightgreen)
+
+Ferramentas:
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -57,7 +59,7 @@ A interface do projeto implementa conceitualmente os requisitos de Front-end dos
 
 1.  Clone o repositório:
     ```bash
-    git clone [https://github.com/](https://github.com/)[SEU_USUARIO_GITHUB]/avaliação-candidatos-comigo.git
+    git clone [https://github.com/](https://github.com/RennerMe/avaliacao-candidatos-comigo/tree/main)
     ```
 2.  Navegue até a pasta do projeto:
     ```bash
@@ -65,7 +67,7 @@ A interface do projeto implementa conceitualmente os requisitos de Front-end dos
     ```
 3.  Abra o arquivo `login.html` em seu navegador de preferência.
     introduza o login e senha:
-    login: admin#comigo.com
+    login: admin@comigo.com
     senha: 1234
 
     *recomendo testar a opção esqueci a senha antes de efetuar o login e até mesmo tentar logar com outros dados.
@@ -77,7 +79,6 @@ Como uma demonstração do meu entendimento do escopo completo do desafio, os pr
 * **Lógica de Validação:** Implementar as validações de campo no formulário de cadastro utilizando JavaScript.
 * **Integração com API:** Conectar a aplicação a uma API para consumir e enviar dados, substituindo o os dados da tabela no HTML.
 * **Refatoração para React/TypeScript:** Migrar a estrutura de componentes para React e adicionar a tipagem com TypeScript, conforme sugerido no desafio.
-* **Lógica de Autenticação:** Implementar a funcionalidade completa de login, utilizando tokens para gerenciar a sessão do usuário.
 
 ### **7. Contato**
 

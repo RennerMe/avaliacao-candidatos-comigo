@@ -57,3 +57,5 @@ if (esqueciSenha) {
     window.location.href = "recuperarSenha.html";
   });
 }
+
+//obrigado
